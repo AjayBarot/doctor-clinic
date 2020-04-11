@@ -1,6 +1,6 @@
 <h2>Welcome to doctor clinic</h2>
 <% if doctor_signed_in? %>
-  <%= label_tag '', 'Welcome Patient ' + current_doctor.email %>
+  <%= label_tag '', 'Welcome Doctor ' + current_doctor.email %>
   <%= link_to 'Sign-out', destroy_doctor_session_path, method: :delete %>
 <% elsif patient_signed_in? %>
   <%= label_tag '', 'Welcome Patient ' + current_patient.email %>
