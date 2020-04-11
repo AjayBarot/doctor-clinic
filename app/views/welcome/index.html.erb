@@ -1,4 +1,15 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<h2>Welcome to doctor clinic</h2>
+<% if doctor_signed_in? %>
+  <%= label_tag '', 'Welcome Patient ' + current_doctor.email %>
+  <%= link_to 'Sign-out', destroy_doctor_session_path, method: :delete %>
+<% elsif patient_signed_in? %>
+  <%= label_tag '', 'Welcome Patient ' + current_patient.email %>
+  <%= link_to 'Sign-out', destroy_patient_session_path, method: :delete %>
+<% else %>
+  <p>
+    <%= link_to 'For Doctor', new_doctor_session_path %>
+  </p>
+  <p>
+    <%= link_to 'For Patient', new_patient_session_path %>
+  </p>
+<% end %>

@@ -38,3 +38,14 @@ class Payrol
 end
 
 Payrol.new.month_finder
+
+
+# Following are the steps to run program
+# ruby exercise1.rb
+# "Enter starting_point"
+# 100
+# "Enter the salary"
+# 2500
+# "Enter the number of years"
+# 3
+# "Your month is 1"
