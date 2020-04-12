@@ -1,7 +1,13 @@
+Exercise 1: 
+
+Please open exercise1.rb file.
+
+Exercise 2:
+
 Online Doctor Clinic  (Ruby 2.6.3 & Rails 6.0.2)
 
 Sample data to go throught the application
-
+ 
 Doctor
 
 `email: ajubarot@gmail.com`
