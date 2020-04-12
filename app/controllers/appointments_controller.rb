@@ -24,7 +24,6 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(app_params)
     respond_to do |format|
       if @appointment.save
-        <%=
         format.html { redirect_to appointments_path, notice: I18n.t('appointment.flash.create') }
       else
         format.html { redirect_to new_appointment_path }
