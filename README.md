@@ -1,24 +1,23 @@
-# README
+Online Doctor Clinic 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Sample data to go throught the application
 
-* Ruby version
+Doctor
 
-* System dependencies
+`email: ajubarot@gmail.com`
+`password: password`
 
-* Configuration
+Patient
 
-* Database creation
+`email: ajubarot+777@gmail.com`
+`password: password`
 
-* Database initialization
 
-* How to run the test suite
+To Do (WIP)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Implement Bootstrap with webpacker
+* Cosmentic changes all over the application
+* Rspec cases for minimal test case
+* Documentation of the code
+* Focus on code smell
