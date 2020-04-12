@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @appointment.try(:doctor).try(:email) %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @appointment.try(:patient).try(:email) %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

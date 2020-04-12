@@ -1,0 +1,35 @@
+<h1>Listing Time Availability</h1>
+
+<div id="events_calendar">
+  <%= render partial: "calendar", locals: {time_availabilities: @time_availabilities} %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Actions</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @time_availabilities.each do |event| %>
+      <tr>
+        <td><%= event.try(:doctor).try(:email) %></td>
+        <td><%= event.start_time %></td>
+        <td><%= event.end_time %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_time_availability_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Time Entry', new_time_availability_path %>
+<%= link_to 'Back', root_path %>

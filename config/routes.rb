@@ -7,5 +7,8 @@ Rails.application.routes.draw do
     sessions: 'doctors/sessions',
     registrations: 'doctors/registrations'
   }
+  resources :time_availabilities
+  resources :appointments
+
   root 'welcome#index'
 end

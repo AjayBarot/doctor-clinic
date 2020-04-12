@@ -1,0 +1,29 @@
+<h1>Listing Appointment </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Doctor</th>
+      <th>Patient</th>
+      <th>Actions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |booking| %>
+      <tr>
+        <td><%= booking.try(:doctor).try(:email) %></td>
+        <td><%= booking.try(:patient).try(:email) %></td>
+        <td><%= link_to 'Show', appointment_path(booking) %></td>
+        <td><%= link_to 'Status Update', edit_appointment_path(booking) if current_doctor.present? %></td>
+        <td><%= link_to 'Destroy', appointment_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Booking', new_appointment_path if current_patient.present? %>
+<%= link_to 'Back', root_path %>
