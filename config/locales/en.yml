@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+
+  appointment:
+    flash:
+      create: 'Appointment has been booked.'
+      update: 'Appointment was successfully updated.'
+      delete: 'Booked Appointment has been destroyed.'
+
+  time:
+    flash:
+      common: "TimeAvailability was successfully %{action}."

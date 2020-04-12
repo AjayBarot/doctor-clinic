@@ -1,0 +1,3 @@
+<%= label_tag 'patient', "Welcome Patient #{current_patient.email}" %>
+<%= link_to 'Appointment', appointments_path %>
+<%= link_to 'Sign-out', destroy_patient_session_path, method: :delete %>

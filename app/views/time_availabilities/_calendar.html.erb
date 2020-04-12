@@ -1,0 +1,10 @@
+<%= week_calendar events: @time_availabilities do |date, events| %>
+  <%= date %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= event.start_time %>
+      <%= event.try(:doctor).try(:email) %>
+    </div>
+  <% end %>
+<% end %>
