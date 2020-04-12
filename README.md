@@ -1,5 +1,4 @@
-Online Doctor Clinic 
-
+Online Doctor Clinic  (Ruby 2.6.3 & Rails 6.0.2)
 
 Sample data to go throught the application
 
